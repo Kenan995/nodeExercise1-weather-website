@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) =>{
         } else if (body.error) {
             callback('Unable to find coordinates. Try another search.', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] + '. It is currently '+ body.current.temperature + ' degrees out. It feels like its ' + body.current.feelslike + ' degrees out!')
+            callback(undefined, body.current.weather_descriptions[0] + '. It is currently '+ body.current.temperature + ' degrees out. It feels like its ' + body.current.feelslike + ' degrees out! The windspeed is ' + body.current.wind_speed + ', and the wind dirrection is ' + body.current.wind_dir + '.')
         }
     })
 }
